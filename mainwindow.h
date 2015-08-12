@@ -5,6 +5,9 @@
 #include <QDebug>
 #include <QString>
 #include <QFileDialog>
+#include <QTime>
+#include <QTimer>
+#include <QVector>
 
 namespace Ui {
 class MainWindow;
@@ -20,6 +23,12 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    QTimer *clock;
+    QVector<QString> timeSequence;
+
+private slots:
+    void updateTime();
+    void on_pushButton_clicked();
 };
 
 #endif // MAINWINDOW_H
