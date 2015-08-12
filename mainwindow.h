@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QDebug>
+#include <QString>
 
 namespace Ui {
 class MainWindow;
