@@ -21,8 +21,13 @@ MainWindow::MainWindow(QWidget *parent) :
 
 //    qDebug() << str.size();  //空白鍵也會算入
     QString fileName;
-     fileName = QFileDialog::getOpenFileName(this,
-        tr("Open Image"), "/home/jana", tr("Image Files (*.png *.jpg *.bmp)"));
+    fileName = fd.getOpenFileName();        //不能選.png .jpg .bmp
+    
+    
+    
+    
+     fileName = QFileDialog::getOpenFileName(this,tr("Open Image"), "/home/jana", tr("Image Files (*.png *.jpg *.bmp)"));
+     qDebug() << fileName;
 }
 
 MainWindow::~MainWindow()
