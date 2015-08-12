@@ -23,7 +23,8 @@ MainWindow::MainWindow(QWidget *parent) :
     QString fileName;
     fileName = fd.getOpenFileName();        //不能選.png .jpg .bmp
     
-    
+    QFileDialog fd;
+    fileName = fd.getOpenFileName(this, "open file", "", "Image(*.jpg)");   //可以選很多東東
     
     
      fileName = QFileDialog::getOpenFileName(this,tr("Open Image"), "/home/jana", tr("Image Files (*.png *.jpg *.bmp)"));
